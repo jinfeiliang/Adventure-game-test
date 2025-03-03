@@ -1,0 +1,160 @@
+@import url("/Fonts/fonts.css");
+@import "normalize.css";
+html {
+  height: 100%;
+  width: 100%;
+}
+
+
+@font-face {
+  font-family: "SILK";
+  src: url("/Fonts/Stepalange.otf") format("opentype");
+}
+
+
+body {
+  margin: 0px;
+  color: lime;
+  font-family: "SILK";
+}
+
+.Top-Bar {
+  width: 100%;
+  height: 50px;
+  background-color: #b0b0b0;
+}
+
+.Main-Content {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: calc(100vh - 50px);
+  background-image: url("Backgrounds/Dark\ wall.jpg");
+  background-size: cover;
+}
+
+.Wall {
+  background: transparent;
+  width: 100%;
+  height: 100%;
+}
+
+.Main-Screen {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.Story-Container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Story-Container > * {
+  margin: 8px;
+}
+
+.Big-Image-Story {
+  width: 35vw;
+  height: 20vw;
+  border: 3px solid white;
+  opacity: 0;
+}
+
+.Story-Big-Text {
+  font-size: 3vh;
+}
+
+.Story-Small-Text {
+  width: 35vw;
+  font-size: 3vh;
+  opacity: 0;
+}
+
+.Big-Image-Story-Menu {
+  width: 35vw;
+  height: 20vw;
+  border: 3px solid white;
+}
+
+.Story-Big-Text-Menu {
+  font-size: 3vh;
+}
+
+.Story-Small-Text-Menu {
+  width: 35vw;
+  font-size: 3vh;
+}
+
+.Buttons-container-Menu{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.Buttons-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  opacity: 0;
+}
+.Buttons {
+  width: 10vw;
+  height: 5vh;
+  margin: 0.1vw;
+  color: white;
+  background-color: rgba(100,100,100,1);
+}
+.Buttons:hover {
+  background-color: rgba(110,110,110,1);
+}
+
+
+.Display-None {
+  display: none;   
+}
+.ForcedVisibilityElement{
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0vw }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #ffffff; }
+}
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #ffffff; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 8 auto; /* Gives that scrolling effect as the typing happens */
+  padding-right: 0.2vw;
+  /* letter-spacing: .15em; /* Adjust as needed */
+  max-width: min-content;
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes imagesappearing {
+  from { opacity: 0}
+  to {opacity: 1}
+}
